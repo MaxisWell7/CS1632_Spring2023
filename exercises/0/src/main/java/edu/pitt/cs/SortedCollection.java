@@ -3,12 +3,11 @@ package edu.pitt.cs;
 //TODO: Import libraries as needed
 import java.util.NoSuchElementException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class SortedCollection {
 	// TODO: Add member variables or methods as needed
-	ArrayList<Integer> numbers = new ArrayList<Integer>(3);
+	ArrayList<Integer> numbers = new ArrayList<Integer>();
 
 	/**
 	 * Adds the number n to the collection.
