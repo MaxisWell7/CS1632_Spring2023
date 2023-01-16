@@ -76,6 +76,7 @@ public class SortedCollection {
 		}
 		
 		// TODO: add numbers in commandline arguments to collection using the add(int) method.
+
 		// If any commandline argument is not a number, call showUsage() and return.
 		for(int i = 0; i < args.length; i++) {
 			if(!isInt(args[0])) {
@@ -83,15 +84,11 @@ public class SortedCollection {
 				return;
 			}
 		}
-		
-		int one = Integer.parseInt(args[0]);
-		int two = Integer.parseInt(args[1]);
-		int three = Integer.parseInt(args[2]);
-		collection.add(one);
-		collection.add(two);
-		collection.add(three);
+		// add all command ints to collection
+		for(int i = 0; i < args.length; i++) {
+			collection.add(Integer.parseInt(args[i]));
+		}
 
-		
 		System.out.print("sorted: ");
 		for (int i = 0; i < args.length; i++) {
 			int num = collection.remove();
