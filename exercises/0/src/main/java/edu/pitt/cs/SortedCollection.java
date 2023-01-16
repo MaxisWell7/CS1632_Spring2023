@@ -19,6 +19,7 @@ public class SortedCollection {
 		// TODO: Implement
 
 		numbers.add(n); // and n to arrayList
+		Collections.sort(numbers);
 		
 		return true;
 	} // end add
@@ -36,7 +37,7 @@ public class SortedCollection {
 			throw new NoSuchElementException();
 		}
 
-		Collections.sort(numbers); // sort the arraylist
+		//Collections.sort(numbers); // sort the arraylist
 		int small = numbers.get(0); // first element will be the smallest
 
 		numbers.remove(small); // remove the smallest
