@@ -52,6 +52,16 @@ public class SortedCollection {
 		System.out.println("Usage: java SortedCollection [num1] [num2] [num3] ...");
 	}
 
+	public static boolean isInt(String x) {
+		try{
+			Integer.parseInt(x);
+			return true;
+		}
+		catch (NumberFormatException e) {
+			return false;
+		}
+	}
+
 	/**
 	 * Main method. Receives a list of numbers as commandline arguments and prints
 	 * out the list in sorted order from smallest to largest.
@@ -67,6 +77,13 @@ public class SortedCollection {
 		
 		// TODO: add numbers in commandline arguments to collection using the add(int) method.
 		// If any commandline argument is not a number, call showUsage() and return.
+		for(int i = 0; i < args.length; i++) {
+			if(!isInt(args[0])) {
+				showUsage();
+				return;
+			}
+		}
+		
 		int one = Integer.parseInt(args[0]);
 		int two = Integer.parseInt(args[1]);
 		int three = Integer.parseInt(args[2]);
