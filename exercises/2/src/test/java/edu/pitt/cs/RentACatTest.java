@@ -37,12 +37,27 @@ public class RentACatTest {
 
 		// 2. Create an unrented Cat with ID 1 and name "Jennyanydots", assign to c1
 		// TODO: Fill in
+		// c1 = new Cat(1, "Jennyanydots");
+		c1 = Mockito.mock(Cat.class);
+		Mockito.when(c1.getId()).thenReturn(1);
+		Mockito.when(c1.getRented()).thenReturn(false);
+		Mockito.when(c1.getName()).thenReturn("Jennyanydots");
 
 		// 3. Create an unrented Cat with ID 2 and name "Old Deuteronomy", assign to c2
 		// TODO: Fill in
+		// c2 = new Cat(2, "Old Deuteronomy");
+		c2 = Mockito.mock(Cat.class);
+		Mockito.when(c2.getId()).thenReturn(2);
+		Mockito.when(c2.getRented()).thenReturn(false);
+		Mockito.when(c2.getName()).thenReturn("Old Deuteronomy");
 
 		// 4. Create an unrented Cat with ID 3 and name "Mistoffelees", assign to c3
 		// TODO: Fill in
+		// c3 = new Cat(3, "Mistoffelees");
+		c3 = Mockito.mock(Cat.class);
+		Mockito.when(c3.getId()).thenReturn(3);
+		Mockito.when(c3.getRented()).thenReturn(false);
+		Mockito.when(c3.getName()).thenReturn("Mistoffelees");
 	}
 
 	@After
@@ -68,6 +83,8 @@ public class RentACatTest {
 	@Test
 	public void testGetCatNullNumCats0() {
 		// TODO
+
+		
 	}
 
 	/**
@@ -84,6 +101,13 @@ public class RentACatTest {
 	@Test
 	public void testGetCatNumCats3() {
 		// TODO
+		r.addCat(c1);
+		r.addCat(c2);
+		r.addCat(c3);
+		Cat c = r.getCat(2);
+		assertNotNull("Returned Cat is null", c);
+		assertEquals("Returned cat does not have ID 2", 2, c.getId());
+		
 	}
 
 	/**
