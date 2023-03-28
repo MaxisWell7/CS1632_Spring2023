@@ -287,15 +287,10 @@ https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html
 In Part 2, you will use a model checker named Java Pathfinder (JPF) to prove
 various correctness properties in your program.
 
-* IMPORTANT: You need Java 8 (1.8.0.231, preferably) to run the Java Path
+* IMPORTANT: You need Java 8 to run the Java Path
   Finder model checker.  Make sure you have the correct Java version by
 doing "java -version" and "javac -version" before going into the JPF
-section.  If you don't have the correct version, here is a link to a folder
-with installation packages for each OS:
-
-https://drive.google.com/drive/folders/1E76H7y2nMsrdiBwJi0nwlzczAgTKKhv7
-
-Please refer Exercise 0: Java Assessment for instructions on how to set up
+section.  Please refer Exercise 0: Java Assessment for instructions on how to set up
 your PATH environment variable.
 
 ## Applying Java Pathfinder (JPF)
