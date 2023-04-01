@@ -287,11 +287,10 @@ https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html
 In Part 2, you will use a model checker named Java Pathfinder (JPF) to prove
 various correctness properties in your program.
 
-* IMPORTANT: You need Java 8 to run the Java Path
-  Finder model checker.  Make sure you have the correct Java version by
-doing "java -version" and "javac -version" before going into the JPF
-section.  Please refer Exercise 0: Java Assessment for instructions on how to set up
-your PATH environment variable.
+* IMPORTANT: You need Java 8 to run the Java Path Finder model checker. Make
+  sure you have the correct Java version by doing "java -version" and "javac
+-version" before going into the JPF section. Please refer Exercise 0: Java
+Assessment for instructions on how to set up your PATH environment variable.
 
 ## Applying Java Pathfinder (JPF)
 
@@ -734,12 +733,12 @@ way to encode properties is though assertions that assert the given invariant
 property at that point of execution.  There are two options to insert these
 assertions:
 
-1. The assertions be embedded in your program code in the form of Java assert
-   statements.  This is useful in the context of systems testing your code as
-these assertions will be checked while your system is running.  But this has
-the drawback that your testing code is mixed in with your implementation code
-which is not good for code readability and/or maintenance.  Also, it is hard to
-apply unit testing in a systematic way.
+1. The assertions be embedded in your program code in the form of Java
+   assert statements.  It is sometimes useful to have these assertions
+checked while your system is deployed in the production site, especially if
+the assertions can prevent a catastrophic event.  But this has the drawback
+that your testing code is mixed in with your implementation code which is
+not good for code readability and/or maintenance.  
 
 1. The other option is to use JPF as part of the JUnit testing framework.
    JUnit will check for defects by checking postconditions using JUnit
@@ -753,7 +752,20 @@ We will choose the latter option.
 
 ### Applying JPF on JUnit to Unit Test DrunkCarnivalShooter
 
-To run JPF on JUnit do (.bat for WIndows, .sh for Mac/Linux):
+In this section, we are going to be working on the
+DrunkCarnivalShooterTest.java JUnit class, and in order to recompile the
+code after modifications, you need to do:
+
+```
+mvn test-compile
+```
+
+Invoking the Maven test-compile phase will build the JUnit files under the
+src/test directory, along with the implementation files under the src/main
+diretory.
+
+
+To run JPF on DrunkCarnivalShooterTest, do (.bat for WIndows, .sh for Mac/Linux):
 
 ```
 .\runJPF.bat JUnit.win.jpf
