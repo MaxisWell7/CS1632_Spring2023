@@ -147,7 +147,7 @@ Now let's put this workflow into action by executing it on a Runner!  click
 on the "Actions" menu again and you should see a new workflow named "Manual
 workflow" on your lefthand side.  Click on it.  Then click on the "Run
 workflow" button.  You will get a pop up with an option to change "Person to
-greet".  Leave everything as=is and click on the green "Run workflow" button
+greet".  Leave everything as-is and click on the green "Run workflow" button
 again.  After a couple of seconds, you will see a new "Manual workflow" run
 appear on the list of runs with an orange dot and the orange dot will soon
 turn into a green checkmark.  The orange dot indicates that the workflow is
@@ -1331,8 +1331,9 @@ page, which was in my case:
 docker pull ghcr.io/cs1632/supplementary-exercise-4-ci-cd-dockers-wonsunahn:main
 ```
 
-Paste it on a terminal to run it.  This will pull the published image on to
-your Docker Desktop.  If you check the "Images" menu, you will see a new
+After replacing "supplementary-exercise-4-ci-cd-dockers-wonsunahn" with the name
+of your repository, run it on the terminal.  This will pull the published image
+on to your Docker Desktop.  If you check the "Images" menu, you will see a new
 image created:
 
 <img alt="Published Docker image pulled" src=img/docker_4.png>
